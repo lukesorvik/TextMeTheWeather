@@ -27,3 +27,10 @@ Note:
 A Markdown file for this repository is under development and will be available in the next couple of days.
 
 Feel free to modify the provided information to better suit your intentions or specific details about the script.
+
+
+Libraries to install: 
+
+pip install requests-html
+
+(I believe schedule, imghdr, smtplib, and email are part of the Python standard library, but you might also need to install them)
