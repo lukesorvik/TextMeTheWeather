@@ -6,8 +6,8 @@ The current schedule is to text the receipeint everyday at 9am as long as the pr
 To use this script, create a `.env` file following the provided example and fill in the required variables. Run the program using the run.bat file
 
 <p float="left">
-  <img src="/assets/example1.jpg?raw=true" height="192">
- <img src="/assets/example2.jpg?raw=true" height="192">
+  <img src="/assets/example1.jpg?raw=true" height="250">
+ <img src="/assets/example2.jpg?raw=true" height="250">
 </p>
 
 
