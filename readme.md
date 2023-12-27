@@ -1,7 +1,9 @@
 
 # Automated Weather Updates via Text Messages
 
-This Python script sends weather updates for a specified area (e.g., Seattle) along with an image of the sky captured from traffic cameras. To use this script, create a `.env` file following the provided example and fill in the required variables.
+This Python script sends weather updates for a specified area (e.g., Seattle) along with an image of the sky captured from traffic cameras. 
+The current schedule is to text the receipeint everyday at 9am as long as the program is running, this schedule and frequency can be edited as you like.
+To use this script, create a `.env` file following the provided example and fill in the required variables. Run the program using the run.bat file
 
 
 
