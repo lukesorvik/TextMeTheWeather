@@ -24,6 +24,8 @@ To use this script, create a `.env` file following the provided example and fill
 
 - You can customize the code to adjust how frequently weather updates are sent.
 
+- I provide examples for Google Fi, and T-Mobile. If you want to send SMS via email through other carriers, you'll need to find out the specific email-to-SMS gateway address for each carrier you want to support. Unfortunately, there's no universal standard for this, and you may need to refer to the documentation or contact the carrier directly to obtain the correct email-to-SMS gateway address.
+
 ##  Libraries to install:
 
 ```bash
