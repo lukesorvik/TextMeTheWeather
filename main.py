@@ -68,7 +68,7 @@ def job():
 
 
 #for testing .env variables, uncomment job() to test the text message without having to wait until 9am
-job()
+#job()
 
 # Schedule the job to run every day at 9 AM
 schedule.every().day.at("09:00").do(job)
