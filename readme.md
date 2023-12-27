@@ -1,5 +1,5 @@
 
-# Automated Weather Updates via Text Messages
+# Automated Weather Updates Via Text Messages
 
 This Python script sends weather updates for a specified area (e.g., Seattle) along with an image of the sky captured from traffic cameras. 
 The current schedule is to text the receipeint everyday at 9am as long as the program is running, this schedule and frequency can be edited as you like.
@@ -35,9 +35,22 @@ pip install requests-html
 
 1. Create a `.env` file with the required variables using the provided `.env_example` file.
 
-2. Customize the script as needed for your use case.
+2. Find The URL Of The Traffic Camera to Scrape (refer to section below)
 
-3. Run the script to start receiving weather updates. (can run using included `run.bat` file, or compile to `.exe` using pyinstaller)
+3. Customize the script as needed for your use case (update frequency of schedule at `schedule.every().day.at("09:00").do(job)` in `main.py`).
+
+4. Run the script to start receiving weather updates. (can run using included `run.bat` file, or compile to `.exe` using pyinstaller)
+
+## Finding The URL Of The Traffic Camera To Scrape:
+1. Find local traffic cameras (I googled "seattle traffic cameras" in my case)
+2. Find a camera you like, get the page to display the image from the camera
+4. While hovering over the image from the camera : `Right-Click, Inspect` 
+5. Find the `<img src=" THE URL HERE" > `  in the html
+6. Copy the url
+7. Make sure the url for the image is not static, and that the camera updates to the same url for all photos
+8. Paste the url into the `main.py` in the `image_url = ""` variable
+9. You are done :)
+
 
 ## Note:
 
