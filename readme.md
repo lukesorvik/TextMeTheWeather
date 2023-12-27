@@ -36,8 +36,6 @@ pip install requests-html
 
 ## Note:
 
-A Markdown file for this repository is under development and will be available in the next couple of days.
-
-Feel free to modify the provided information to better suit your intentions or specific details about the script.
+This readme is currently a work in progress, it should be done within the next few days
 
 
