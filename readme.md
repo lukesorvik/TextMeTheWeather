@@ -32,7 +32,9 @@ To use this script, create a `.env` file following the provided example and fill
 ```bash
 pip install requests-html
 ```
-
+```bash
+pip install python-dotenv
+```
 
 ## Instructions:
 
