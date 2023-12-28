@@ -32,7 +32,8 @@ phone_numbers_str = os.environ.get('RECIPIENT_PHONE_NUMBERS')
 phone_numbers_list = phone_numbers_str.split(',')
 
 # URL of the image to scrape, in this case traffic cam
-image_url = "https://www.seattle.gov/trafficcams/images/Latona_NE_50_EW.jpg"
+image_url = os.environ.get('Camera_URL')
+
 
 #gets the city from the environment variable
 city = os.environ.get('City') 
