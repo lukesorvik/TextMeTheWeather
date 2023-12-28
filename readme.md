@@ -59,8 +59,3 @@ pip install python-dotenv
 
 
 
-## Note:
-
-This readme is currently a work in progress, it should be done within the next few days
-
-
