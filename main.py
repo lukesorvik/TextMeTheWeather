@@ -34,8 +34,8 @@ phone_numbers_list = phone_numbers_str.split(',')
 # URL of the image to scrape, in this case traffic cam
 image_url = "https://www.seattle.gov/trafficcams/images/Latona_NE_50_EW.jpg"
 
-city = "seattle" #city to get weather for
-
+#gets the city from the environment variable
+city = os.environ.get('City') 
 
 #function to send the text message
 def send_sms(message, RECIPIENT_PHONE_NUMBER):
