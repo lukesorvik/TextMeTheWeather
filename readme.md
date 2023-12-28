@@ -55,7 +55,7 @@ pip install python-dotenv
 5. Find the `<img src=" THE URL HERE" > `  in the html
 6. Copy the url
 7. Make sure the url for the image is not static, and that the camera updates to the same url for all photos
-8. Within `main.py` paste the url into the `image_url = ""` variable
+8. Within `.env` paste the url into the `Camera_URL = ""` variable
 
 
 
