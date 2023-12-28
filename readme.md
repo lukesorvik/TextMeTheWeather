@@ -40,13 +40,13 @@ pip install python-dotenv
 
 1. Create a `.env` file with the required variables using the provided `.env_example` file.
 
-2. Update the `city = "city you want to get weather from"` variable in `main.py` to get weather from a specific area
+2. Find The URL Of The Traffic Camera to Scrape (refer to section below)
 
-3. Find The URL Of The Traffic Camera to Scrape (refer to section below)
+3. Customize the script as needed for your use case (update frequency of schedule at `schedule.every().day.at("09:00").do(job)` in `main.py`).
 
-4. Customize the script as needed for your use case (update frequency of schedule at `schedule.every().day.at("09:00").do(job)` in `main.py`).
+4. Run the script to start receiving weather updates. (can run using included `run.bat` file, or compile to `.exe` using pyinstaller)
 
-5. Run the script to start receiving weather updates. (can run using included `run.bat` file, or compile to `.exe` using pyinstaller)
+5. You are done :) 
 
 ## Finding The URL Of The Traffic Camera To Scrape:
 1. Find local traffic cameras (I googled "seattle traffic cameras" in my case)
@@ -55,8 +55,8 @@ pip install python-dotenv
 5. Find the `<img src=" THE URL HERE" > `  in the html
 6. Copy the url
 7. Make sure the url for the image is not static, and that the camera updates to the same url for all photos
-8. Paste the url into the `main.py` in the `image_url = ""` variable
-9. You are done :)
+8. Within `main.py` paste the url into the `image_url = ""` variable
+
 
 
 ## Note:
