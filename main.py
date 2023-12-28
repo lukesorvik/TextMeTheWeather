@@ -24,7 +24,12 @@ load_dotenv()
 #declares variables from environment variables
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
 SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD')
-RECIPIENT_PHONE_NUMBER = os.environ.get('RECIPIENT_PHONE_NUMBER')
+
+# Retrieve the phone numbers from the environment variable
+phone_numbers_str = os.environ.get('RECIPIENT_PHONE_NUMBERS')
+
+# Parse the string into a list
+phone_numbers_list = phone_numbers_str.split(',')
 
 # URL of the image to scrape, in this case traffic cam
 image_url = "https://www.seattle.gov/trafficcams/images/Latona_NE_50_EW.jpg"
@@ -33,7 +38,7 @@ city = "seattle" #city to get weather for
 
 
 #function to send the text message
-def send_sms(message):
+def send_sms(message, RECIPIENT_PHONE_NUMBER):
     server = smtplib.SMTP('smtp.gmail.com', 587) #creates new smtplib object
     server.starttls()
     server.login(SENDER_EMAIL, SENDER_PASSWORD) #logs into the email using the environment variables
@@ -64,11 +69,14 @@ def job():
     messageToSend = f"Good morning! {weather_info}"
     print(messageToSend) #prints the message we will send
     download_image.download_image(image_url, "traffic_cam.jpg") #download_image.py downloads the image using the url, saves it as traffic_cam.jpg
-    send_sms(messageToSend)
+
+    for phone_number in phone_numbers_list:
+        send_sms(messageToSend, phone_number) #sends the message to each phone number in the list
+
 
 
 #for testing .env variables, uncomment job() to test the text message without having to wait until 9am
-#job()
+job()
 
 # Schedule the job to run every day at 9 AM
 schedule.every().day.at("09:00").do(job)
